@@ -1,9 +1,11 @@
 body {
-    background-color: antiquewhite;
+    background-color: #ffffff; font-family: "Futura Std"; letter-spacing: 0.15rem;
 }
 
 header {
-    font-family: "Futura Std", sans-serif; background-color: rgb(255, 255, 255); position: relative; box-shadow: rgb(0, 0, 0);
+    font-family: "Futura Std", sans-serif; background-color: rgb(255, 255, 255); position: fixed; box-shadow: rgb(0, 0, 0);
+    width: 100%; z-index: 1;
+
 }
 
 .logo {
@@ -15,8 +17,42 @@ header {
 }
 
 .content {
-    background-image: url(source/ChatGPT\ Image\ 24\ ม.ค.\ 2569\ 07_44_30.png); background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Futura Std", sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(source/monet.webp);
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: -1;
+}
+
+.meet {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.content2 {
+    position: relative;
+}
+
+.pinklao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+.pinklao img {
+    height: auto; width: 100vw;
 }

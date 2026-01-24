@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fonts-archive-futura-std/FuturaStd.css" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="stylecenmet.css">
     <title>CENMET</title>
 </head>
 
 <body>
     <header class="d-flex justify-content-center py-2">
-        <div class="logo fs-3 fw-medium"><a href="index.html">CEN<span style="color: rgb(216, 216, 216);">TRAL</span> MET<span style="color: rgb(216, 216, 216);">ROPOLITAN</span></a></div> 
+        <div class="logo fs-2 fw-medium"><a href="index.html">CEN<span style="color: #c7d9c3;">TRAL</span> MET<span style="color: #c7d9c3;">ROPOLITAN</span></a></div> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </header>
 
     <section class="content">
-        <div></div>
+        
+        <div class="bg"></div>
+        <div class="meet display-1 fw-medium text-center justify-content-center align-items-center">Meet me at CENMET</div>
     </section>
+
+    <section class="content2 vh-100">
+        <div class="display-3 fw-medium py-5 px-5">DESIGNED LIKE A CITY<br>LIVED LIKE A HOME</div>
+        <div class="pinklao ms-auto"><img src="source/japan.png" alt=""></div>
+    </section>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector(".bg").style.transform =
+                `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+
 </body>
 
 </html>
