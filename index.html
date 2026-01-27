@@ -12,12 +12,11 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-center py-2">
-        <div class="logo fs-2 fw-medium"><a href="index.html">CEN<span style="color: #c7d9c3;">TRAL</span> MET<span style="color: #c7d9c3;">ROPOLITAN</span></a></div> 
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <header class="d-flex justify-content-center py-3">
+        <div class="logo fs-1 fw-medium"><a href="index.html">CEN<span class="add" style="color: #ffffff;">TRAL</span> MET<span class="add" style="color: #ffffff;">ROPOLITAN</span></a></div> 
     </header>
+
+    <section id="hero"></section>
 
     <section class="content">
         
@@ -26,7 +25,7 @@
     </section>
 
     <section class="content2 vh-100">
-        <div class="display-3 fw-medium py-5 px-5">DESIGNED LIKE A CITY<br>LIVED LIKE A HOME</div>
+        <div class="display-3 fw-medium py-5 px-5" style="color: #a6bfb8;" >DESIGNED LIKE A CITY<br>LIVED LIKE A HOME</div>
         <div class="pinklao ms-auto"><img src="source/japan.png" alt=""></div>
     </section>
 
@@ -34,8 +33,19 @@
         window.addEventListener("scroll", () => {
             const scrolled = window.pageYOffset;
             document.querySelector(".bg").style.transform =
-                `translateY(${scrolled * 0.5}px)`;
+                `translateY(${scrolled * 0.6}px)`;
         });
+
+    const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > window.innerHeight) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
     </script>
 
 </body>
