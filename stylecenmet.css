@@ -22,6 +22,28 @@ header {
             right 0.7s ease,
             border-radius 0.7s ease,
             box-shadow 0.7s ease;
+            
+            
+}
+
+header {
+    position: fixed;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease,
+        top 0.7s ease,
+        left 0.7s ease,
+        right 0.7s ease,
+        border-radius 0.7s ease,
+        box-shadow 0.7s ease;
+}
+
+header.hide {
+    transform: translateY(-120%);
 }
 
 header.scrolled {
@@ -32,9 +54,6 @@ header.scrolled {
         background: rgba(255, 255, 255, 1);
         
         border-radius: 0 0 1.5rem 1.5rem;
-        box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.0.8),
-                0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 header.scrolled .logo a {
@@ -46,7 +65,7 @@ header.scrolled .logo a {
 }
 
 .logo a {
-    text-decoration: none; color: rgb(101, 101, 101); 
+    text-decoration: none; color: rgb(255, 255, 255);
 }
 
 .content {
@@ -77,8 +96,8 @@ header.scrolled .logo a {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); color: #ffffff;
 }
 
-.content2 {
-    position: relative; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); background-color: rgb(255, 255, 255);
+.ct2 {
+    position: relative; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); background-color: rgb(255, 255, 255);
 }
 
 .pinklao {
@@ -89,4 +108,93 @@ header.scrolled .logo a {
 
 .pinklao img {
     height: auto; width: 100vw;
+}
+
+.foot {
+    background-image: url(source/garden.jpg); border-radius: 2rem 2rem 0 0;
+}
+
+.footer {
+    padding: 2rem 2.5rem 1rem;
+    border-radius: 2rem 2rem 0 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2.5rem);
+    -webkit-backdrop-filter: blur(2.5rem);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-family: "Futura Std", sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+/* Brand */
+.footer-brand h2 {
+    letter-spacing: 0.1rem;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Contact */
+.footer-contact p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    opacity: 0.85;
+}
+
+/* Bottom */
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

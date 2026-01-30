@@ -13,7 +13,7 @@
 
 <body>
     <header class="d-flex justify-content-center py-3">
-        <div class="logo fs-1 fw-medium"><a href="index.html">CEN<span class="add" style="color: #ffffff;">TRAL</span> MET<span class="add" style="color: #ffffff;">ROPOLITAN</span></a></div> 
+        <div class="logo display-4 fw-medium"><a href="index.html">CENTRAL METROPOLITAN</a></div> 
     </header>
 
     <section id="hero"></section>
@@ -24,10 +24,40 @@
         <div class="meet display-1 fw-medium text-center justify-content-center align-items-center">Meet me at CENMET</div>
     </section>
 
-    <section class="content2 vh-100">
+    <section class="ct2 vh-100">
         <div class="display-3 fw-medium py-5 px-5" style="color: #a6bfb8;" >DESIGNED LIKE A CITY<br>LIVED LIKE A HOME</div>
         <div class="pinklao ms-auto"><img src="source/japan.png" alt=""></div>
     </section>
+
+    <section class="ct3"><img src="source/garden.jpg" alt=""></section>
+
+    <section class="foot">
+        <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>CENTRAL METROPOLITAN</h2>
+                <p>Urban lifestyle & modern living</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: info@example.com</p>
+                <p>Tel: 02-123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 CENTRAL METROPOLITAN. All rights reserved.
+        </div>
+    </section>
+</footer>
 
     <script>
         window.addEventListener("scroll", () => {
@@ -38,13 +68,28 @@
 
     const header = document.querySelector("header");
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > window.innerHeight) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > window.innerHeight) {
+            header.classList.add("scrolled");
+
+            if (currentScrollY > lastScrollY) {
+                header.classList.add("hide");
             }
-        });
+            else {
+                header.classList.remove("hide");
+            }
+        } 
+        else {
+            header.classList.remove("scrolled");
+            header.classList.remove("hide");
+        }
+
+        lastScrollY = currentScrollY;
+    });
 
     </script>
 
