@@ -12,9 +12,26 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-center py-3">
-        <div class="logo display-5 fw-medium"><a href="index.html">CENTRAL METROPOLITAN</a></div> 
+    <header class="main-header">
+    <div class="logo">
+        <a href="index.html" class="display-5 fw-medium">CENTRAL METROPOLITAN</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <nav class="menu-content fs-5">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </div>
 
     <section id="hero"></section>
 
@@ -104,6 +121,14 @@
 
         lastScrollY = currentScrollY;
     });
+
+    const toggle = document.getElementById("menuToggle");
+        const overlay = document.getElementById("menuOverlay");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
     </script>
 
 </body>
