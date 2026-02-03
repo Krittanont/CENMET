@@ -15,7 +15,7 @@ header {
         top: 1rem;
         font-family: "Futura Std", sans-serif;
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(3rem);
+        backdrop-filter: blur(0.5rem);
         -webkit-backdrop-filter: blur(2.5rem);
         border: 0.5px solid rgba(255, 255, 255, 0.3);
         border-radius: 2rem;
@@ -28,8 +28,6 @@ header {
             right 0.7s ease,
             border-radius 0.7s ease,
             box-shadow 0.7s ease;
-            
-            
 }
 
 header {
@@ -205,8 +203,8 @@ header.scrolled .logo a {
     padding: 2rem 2.5rem 1rem;
     border-radius: 2rem 2rem 0 0;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     border: 0.5px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     font-family: "Futura Std", sans-serif;
