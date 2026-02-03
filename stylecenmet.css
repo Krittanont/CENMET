@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ffffff; font-family: "Futura Std"; letter-spacing: 0.15rem;
 }
@@ -57,7 +63,7 @@ header.scrolled {
 }
 
 header.scrolled .logo a {
-    color: rgb(154, 185, 174);
+    color: #000000;
 }
 
 .logo {
@@ -65,7 +71,7 @@ header.scrolled .logo a {
 }
 
 .logo a {
-    text-decoration: none; color: rgb(255, 255, 255);
+    text-decoration: none; color: rgb(255, 255, 255); 
 }
 
 .content {
@@ -82,7 +88,7 @@ header.scrolled .logo a {
 .bg {
     position: absolute;
     inset: 0;
-    background-image: url(source/Cypresses.jpg);
+    background-image: url(source/lily.jpg);
     background-size: cover;
     background-position: center;
     will-change: transform;
@@ -100,6 +106,15 @@ header.scrolled .logo a {
     position: relative; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); background-color: rgb(255, 255, 255);
 }
 
+.ct3 {
+    height: 100vh; margin-top: 20rem; margin-bottom: 10rem;
+}
+
+.ct3 img {
+        height: auto;
+        width: 150vh; margin: 0;
+}
+
 .pinklao {
     position: absolute;
     top: 50%;
@@ -107,19 +122,91 @@ header.scrolled .logo a {
 }
 
 .pinklao img {
-    height: auto; width: 100vw;
+    height: auto; width: 99.5vw;
+}
+
+.panel {
+    height: 70vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    font-weight: bold;
+}
+
+/* ไล่ layer */
+.panel:nth-child(1) {
+    z-index: 1;
+}
+
+.panel:nth-child(2) {
+    z-index: 2;
+}
+
+.panel:nth-child(3) {
+    z-index: 3;
+}
+
+.panel:nth-child(4) {
+    z-index: 4;
+}
+
+/* สีแต่ละหน้า */
+.red {
+    background-image: url(source/monet.webp);
+    color: white;
+    width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+.dark {
+    width: 100%;
+        height: 100vh;
+        /* เต็มความสูงจอ */
+        background-image: url("source/woman_with_a_parasol.jpg");
+        background-size: cover;
+        /* ⭐ หัวใจ */
+        background-position: center;
+        background-repeat: no-repeat;
+    color: white;
+}
+
+.white {
+    width: 100%;
+        height: 100vh;
+        background-image: url("source/Cypresses.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.black {
+    width: 100%;
+        height:100vh;
+        background-image: url("source/parliament_sunset.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #ffffff;
 }
 
 .foot {
-    background-image: url(source/garden.jpg); border-radius: 2rem 2rem 0 0;
+    border-radius: 3rem 3rem 0 0;
 }
 
 .footer {
     padding: 2rem 2.5rem 1rem;
     border-radius: 2rem 2rem 0 0;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(2.5rem);
-    -webkit-backdrop-filter: blur(2.5rem);
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem);
     border: 0.5px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     font-family: "Futura Std", sans-serif;
@@ -132,14 +219,13 @@ header.scrolled .logo a {
     align-items: start;
 }
 
-/* Brand */
 .footer-brand h2 {
     letter-spacing: 0.1rem;
 }
 
 .footer-brand p {
     font-size: 0.9rem;
-    opacity: 0.85;
+    opacity: 0.55;
 }
 
 /* Links */
@@ -156,12 +242,12 @@ header.scrolled .logo a {
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    opacity: 0.85;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
 .footer-links a:hover {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 /* Contact */
@@ -181,7 +267,6 @@ header.scrolled .logo a {
     opacity: 0.8;
 }
 
-/* 📱 Responsive */
 @media (max-width: 768px) {
     .footer {
         padding: 1.5rem;
