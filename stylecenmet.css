@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    background-color: #ffffff; font-family: "Futura Std"; letter-spacing: 0.15rem;
+    background-color: #ffffff; font-family: "Bellefair", serif;
 }
 
 header {
@@ -13,7 +15,7 @@ header {
         left: 1.5rem;
         right: 1.5rem;
         top: 1rem;
-        font-family: "Futura Std", sans-serif;
+        font-family: "Bellefair", serif;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(0.5rem);
         -webkit-backdrop-filter: blur(2.5rem);
@@ -63,10 +65,6 @@ header.scrolled .logo a {
     color: #000000;
 }
 
-.logo {
-    letter-spacing: 0.15rem;
-}
-
 .logo a {
     text-decoration: none;
     color: #ffffff;
@@ -82,15 +80,13 @@ header.scrolled .logo a {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-family: "Futura Std", sans-serif;
+    font-family: "Bellefair", serif;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0.5rem);
     -webkit-backdrop-filter: blur(0.5rem);
     border: 0.5px solid rgba(255, 255, 255, 0.3);
     border-radius: 2rem;
     z-index: 1002;
-
     transition: all 0.6s ease;
 }
 
@@ -175,7 +171,7 @@ header.scrolled .logo a {
 }
 
 .menu-content a {
-    font-family: "Futura Std", sans-serif;
+    font-family: "Bellefair", serif;
     color: #ffffff;
     text-decoration: none;
     letter-spacing: 2px;
@@ -190,7 +186,7 @@ header.scrolled .logo a {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-    font-family: "Futura Std", sans-serif;
+    font-family: "Bellefair", serif;
     color: aliceblue;
     display: flex;
     justify-content: center;
@@ -321,7 +317,7 @@ header.scrolled .logo a {
     -webkit-backdrop-filter: blur(1rem);
     border: 0.5px solid rgba(255, 255, 255, 0.3);
     color: #fff;
-    font-family: "Futura Std", sans-serif;
+    font-family: "Bellefair", serif;
 }
 
 .footer-container {
